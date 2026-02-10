@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>人材が定着する採用戦略セミナー｜採用定着支援協会</title>
+  <meta name="description" content="3,000社の実績が証明する、中小企業のための「勝ちパターン」。採用の悩みを解決する4回シリーズの無料セミナー。" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#F0F9FF;
+      --panel: rgba(59,130,246,.04);
+      --panel2: rgba(59,130,246,.08);
+      --stroke: rgba(59,130,246,.15);
+      --text:#0F172A;
+      --muted: rgba(15,23,42,.70);
+      --muted2: rgba(15,23,42,.55);
+      --accent:#3B82F6;
+      --accent2:#10B981;
+      --accent-gold:#D4AF37;
+      --warn:#F59E0B;
+      --ok:#10B981;
+      --shadow: 0 20px 60px rgba(59,130,246,.12);
+      --radius: 20px;
+      --radius2: 28px;
+      --max: 1200px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    
+    body {
+      font-family: "Noto Sans JP", system-ui, -apple-system, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: radial-gradient(1200px 600px at 15% 10%, rgba(59,130,246,.15), transparent 60%),
+                  radial-gradient(900px 520px at 85% 18%, rgba(16,185,129,.12), transparent 60%),
+                  radial-gradient(900px 520px at 55% 95%, rgba(147,197,253,.10), transparent 60%),
+                  var(--bg);
+      overflow-x: hidden;
+      line-height: 1.7;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; height: auto; display: block; }
+    
+    .wrap { 
+      max-width: var(--max); 
+      margin: 0 auto; 
+      padding: 0 20px; 
+    }
+
+    /* Header */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(14px);
+      background: rgba(240,249,255,.90);
+      border-bottom: 1px solid rgba(59,130,246,.12);
+      padding: 16px 0;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .logo-text {
+      font-weight: 900;
+      font-size: 18px;
+      letter-spacing: 0.5px;
+    }
+
+    .header-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 20px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 14px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: white;
+      border: none;
+      box-shadow: 0 8px 24px rgba(59,130,246,.20);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .header-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(59,130,246,.30);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 40px 0 60px;
+    }
+
+    .hero-image {
+      width: 100%;
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
+      margin-bottom: 40px;
+    }
+
+    /* Content Sections */
+    .section {
+      padding: 60px 0;
+    }
+
+    .section-image {
+      width: 100%;
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
+      margin-bottom: 30px;
+    }
+
+    /* Video Section */
+    .video-section {
+      padding: 60px 0;
+      background: rgba(255,255,255,.70);
+      border-radius: var(--radius2);
+      margin: 40px 0;
+    }
+
+    .video-container {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      margin: 30px 0;
+      background: #1E293B;
+    }
+
+    .video-container video {
+      width: 100%;
+      display: block;
+    }
+
+    /* Audio Section */
+    .audio-section {
+      padding: 40px;
+      background: rgba(255,255,255,.70);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
+      margin: 40px 0;
+    }
+
+    .audio-title {
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .audio-player {
+      border-radius: 16px;
+      border: 1px solid rgba(59,130,246,.15);
+      background: rgba(255,255,255,.90);
+      padding: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .audio-player audio {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .audio-label {
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    /* Seminar Details Grid */
+    .seminar-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin: 40px 0;
+    }
+
+    .seminar-card {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease;
+    }
+
+    .seminar-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .seminar-card img {
+      width: 100%;
+      display: block;
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      background: rgba(255,255,255,.70);
+      border-radius: var(--radius2);
+      padding: 40px;
+      margin: 40px 0;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .cta-image {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      border-radius: var(--radius2);
+      box-shadow: 0 30px 80px rgba(59,130,246,.15);
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 48px;
+      font-size: 20px;
+      font-weight: 900;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: white;
+      border: none;
+      box-shadow: 0 20px 60px rgba(59,130,246,.25);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      margin-top: 40px;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 25px 70px rgba(59,130,246,.35);
+    }
+
+    /* Footer */
+    .footer {
+      padding: 40px 0;
+      text-align: center;
+      color: var(--muted2);
+      font-size: 14px;
+      border-top: 1px solid rgba(59,130,246,.10);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .header-cta {
+        padding: 10px 16px;
+        font-size: 12px;
+      }
+
+      .section {
+        padding: 40px 0;
+      }
+
+      .seminar-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-button {
+        padding: 16px 32px;
+        font-size: 18px;
+      }
+    }
+
+    /* Animation */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in {
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    /* Scroll Animation */
+    .scroll-fade {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .scroll-fade.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="wrap">
+      <div class="header-inner">
+        <div class="logo-text">採用定着支援協会</div>
+        <a href="#apply" class="header-cta">無料セミナーに申し込む</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="wrap">
+      <img src="Winning_Retention_Strategy_ページ_01.png" alt="人材が定着する採用戦略セミナー" class="hero-image fade-in">
+    </div>
+  </section>
+
+  <!-- Problem Section -->
+  <section class="section">
+    <div class="wrap">
+      <img src="Winning_Retention_Strategy_ページ_02.png" alt="なぜ、あなたの会社は採用できないのか？" class="section-image scroll-fade">
+    </div>
+  </section>
+
+  <!-- Detailed Overview Section -->
+  <section class="section">
+    <div class="wrap">
+      <img src="unnamed__31_.png" alt="4回シリーズセミナー詳細概要" class="section-image scroll-fade">
+    </div>
+  </section>
+
+  <!-- Strategy Section -->
+  <section class="section">
+    <div class="wrap">
+      <img src="Winning_Retention_Strategy_ページ_03.png" alt="大企業の土俵で戦っていませんか？" class="section-image scroll-fade">
+    </div>
+  </section>
+
+  <!-- Solution Section -->
+  <section class="section">
+    <div class="wrap">
+      <img src="Winning_Retention_Strategy_ページ_04.png" alt="採用の勝ちパターンを無料で公開" class="section-image scroll-fade">
+    </div>
+  </section>
+
+  <!-- 3-Step Strategy Guide -->
+  <section class="section">
+    <div class="wrap">
+      <img src="unnamed__32_.png" alt="定着する人材を確保する3つの秘策" class="section-image scroll-fade">
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section class="video-section">
+    <div class="wrap">
+      <h2 style="text-align: center; font-size: 28px; font-weight: 900; margin-bottom: 30px;">セミナー紹介動画</h2>
+      <div class="video-container scroll-fade">
+        <video controls poster="Winning_Retention_Strategy_ページ_01.png">
+          <source src="採用の勝ち戦略_会社のポテンシャルを解き放つ_send.mp4" type="video/mp4">
+          お使いのブラウザは動画タグをサポートしていません。
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- Audio Section -->
+  <section class="audio-section">
+    <div class="wrap">
+      <h3 class="audio-title">🎧 求人票のNGワード解説</h3>
+      <div class="audio-player scroll-fade">
+        <label class="audio-label">「アットホームな職場」が人を遠ざける理由</label>
+        <audio controls>
+          <source src="求人票のアットホームが人を遠ざける_send.m4a" type="audio/mp4">
+          お使いのブラウザは音声タグをサポートしていません。
+        </audio>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seminar Structure -->
+  <section class="section">
+    <div class="wrap">
+      <img src="Winning_Retention_Strategy_ページ_05.png" alt="4回シリーズのセミナー構成" class="section-image scroll-fade">
+    </div>
+  </section>
+
+  <!-- Seminar Details Grid -->
+  <section class="section">
+    <div class="wrap">
+      <div class="seminar-grid">
+        <div class="seminar-card scroll-fade">
+          <img src="Winning_Retention_Strategy_ページ_06.png" alt="第1回：採用力向上">
+        </div>
+        <div class="seminar-card scroll-fade">
+          <img src="Winning_Retention_Strategy_ページ_07.png" alt="第2回：求人票改革">
+        </div>
+        <div class="seminar-card scroll-fade">
+          <img src="Winning_Retention_Strategy_ページ_08.png" alt="第3回：応募者対応">
+        </div>
+        <div class="seminar-card scroll-fade">
+          <img src="Winning_Retention_Strategy_ページ_09.png" alt="第4回：面接技術">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instructor Section -->
+  <section class="section">
+    <div class="wrap">
+      <img src="Winning_Retention_Strategy_ページ_10.png" alt="講師紹介：松下智彦" class="section-image scroll-fade">
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="wrap">
+      <img src="Winning_Retention_Strategy_ページ_11.png" alt="よくある質問" class="scroll-fade">
+    </div>
+  </section>
+
+  <!-- Schedule Section -->
+  <section class="section">
+    <div class="wrap">
+      <img src="Winning_Retention_Strategy_ページ_12.png" alt="開催スケジュール" class="section-image scroll-fade">
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section class="cta-section" id="apply">
+    <div class="wrap">
+      <img src="Winning_Retention_Strategy_ページ_13.png" alt="経営の未来を変える90分" class="cta-image scroll-fade">
+      <button class="cta-button" onclick="window.location.href='#申込フォームのURL'">
+        今すぐ無料セミナーに申し込む
+      </button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="wrap">
+      <p>© 採用定着支援協会 All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll Animation
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.scroll-fade').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Smooth Scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
